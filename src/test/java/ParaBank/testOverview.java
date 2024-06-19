@@ -9,12 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-//import reportes.ReportFactory;
+
 
 import java.time.Duration;
 
-//import static org.junit.jupiter.api.Assertions.assertTrue;
-//import static reportes.ReportFactory.captureScreenshot;
+
+
 
 @Tag("OVERVIEW")
 public class testOverview {
@@ -54,7 +54,7 @@ public class testOverview {
             overviewPage.escribirPassword("1234");
             overviewPage.clickRegistrarse();
             test.log(Status.INFO, "Ingreso en el Usuario");
-
+            Thread.sleep(1000);
 
             if (overviewPage.cuentaCreadaTexto().equals("*Balance includes deposits that may be subject to holds")) {
                 test.log(Status.PASS, "Validar texto en Resumen de cuentas");
