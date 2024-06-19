@@ -49,7 +49,7 @@ public class testNewAccount {
 
         NewAccountPage newAccountPage = new NewAccountPage(driver, wait);
 
-   //     try {
+        try {
 
             newAccountPage.escribirNombre("1234");
             newAccountPage.escribirPassword("1234");
@@ -65,7 +65,7 @@ public class testNewAccount {
             Thread.sleep(9000);
         test.log(Status.INFO, "click boton");
         test.log(Status.PASS, "Validacion de Cuenta Exitoso");
-/*
+
             if (newAccountPage.cuentaCreadaTexto().contains("Congratulations")) {
                 test.log(Status.PASS, "Validacion de Cuenta Exitoso");
             } else {
@@ -73,7 +73,7 @@ public class testNewAccount {
             }
         }catch (Exception e) {
             test.log(Status.FAIL, "Validación de Registro Fallido" + e.getMessage());
-        }*/
+        }
         test.log(Status.INFO, "Finaliza el Test");
     }
     @AfterEach
